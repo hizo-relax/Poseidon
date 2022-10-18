@@ -1,4 +1,5 @@
 <template>
+	<h2>递归数结构</h2>
     <tree :tree-data="treeData" />
 </template>
 

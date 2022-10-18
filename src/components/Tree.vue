@@ -1,6 +1,6 @@
 <!-- 树形组件  -->
 <template>
-	<div class="container">
+	<div class="tree-container">
 		<div v-for="item in treeData" :key="item">
 			<div class="row" @click="extend(item)">
 				<span
@@ -37,7 +37,7 @@ const extend = (item) => {
 </script>
 
 <style scoped>
-.container {
+.tree-container {
 	font-size: 14px;
 }
 .row {

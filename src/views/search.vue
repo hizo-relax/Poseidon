@@ -1,4 +1,5 @@
 <template>
+	<h2>动态表单</h2>
     <h-search
         :form-items="formItems"
         @ok="search"

@@ -8,6 +8,7 @@ import store from './store';
 
 // 引入 ant-design 样式
 import "ant-design-vue/dist/antd.css"
+import './global.less';
 
 // 引入 Search 组件
 import HSearch from './components/H-Search';

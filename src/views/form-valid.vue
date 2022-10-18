@@ -1,5 +1,5 @@
 <template>
-    <h2 style="margin-bottom: 20px">Form 数组表单验证</h2>
+    <h2>自定义组件</h2>
     <a-form ref="formRef" :model="form">
         <div class="member" v-for="(item, index) in form.member" :key="item">
             <a-form-item

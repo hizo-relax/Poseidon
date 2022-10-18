@@ -1,4 +1,5 @@
 <template>
+	<h2>Form 数组表单验证</h2>
 	<Radio v-model:val="sex" />
 	<Button class="btn" size="small" @click="getValue">获取</Button>
 	<Button class="btn" size="small" @click="openModal">打开自定义弹框</Button>

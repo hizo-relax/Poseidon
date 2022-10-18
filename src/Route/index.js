@@ -1,12 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import index from '../views/index.vue';
-import i18n from '../views/i18n.vue';
 import search from '../views/search.vue';
 import tree from '../views/tree.vue';
 import formValid from '../views/form-valid.vue';
 import customRadio from '../views/custom-radio.vue';
 import notFound from '../views/404.vue';
-import table from '../views/table.vue';
 import Login from '../views/login.vue';
 
 // 定义路由
@@ -15,10 +13,6 @@ const routes = [
         path: '/',
         component: index,
         children: [
-            {
-                path: '/i18n',
-                component: i18n,
-            },
             {
                 path: '/search',
                 component: search,
@@ -34,10 +28,6 @@ const routes = [
             {
                 path: '/customRadio',
                 component: customRadio,
-            },
-            {
-                path: '/table',
-                component: table,
             },
             {
                 path: '/:catchAll(.*)',

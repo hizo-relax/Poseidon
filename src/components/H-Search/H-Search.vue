@@ -16,8 +16,6 @@
         <a-button type="primary" @click="confirm">搜索</a-button>
         <a-button @click="reset">重置</a-button>
     </div>
-	<br>
-	<Input />
 </template>
 
 <script>
