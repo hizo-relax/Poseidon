@@ -1,100 +1,68 @@
 <template>
-    <div class="container">
-		<aside>
-			<h1>Poseidon</h1>
-			<a-menu
-				v-model:openKeys="openKeys"
-				v-model:selectedKeys="selectedKeys"
-				mode="inline"
-				theme="dark"
-			>
-				<a-sub-menu v-for="item in menuList" :key="item.key">
-					<template #title>{{ item.name }}</template>
-					<a-menu-item
-						v-for="child in item.children"
-						:key="child.key"
-						@click="$router.push(child.path)"
-					>
-						{{ child.name }}
-					</a-menu-item>
-				</a-sub-menu>
-			</a-menu>
-		</aside>
-		<section>
-			<header></header>
-			<div class="main">
-				<router-view />
+    <div class="index-container">
+		<header class="header">
+			<h1 class="logo">Poseidon</h1>
+			<div class="search-input">
+				<input type="text" />
 			</div>
-		</section>
+			<img class="avatar" src="avatar.png" alt="avatar">
+		</header>
+		<div class="main">
+			<router-view />
+		</div>
     </div>
 </template>
 
 <script>
-import { Menu, SubMenu } from "ant-design-vue";
-
-const menu = [
-    { key: '1', name: 'tree', path: '/tree' },
-    { key: '2', name: 'search', path: '/search' },
-    { key: '4', name: 'formValid', path: '/formValid' },
-    { key: '5', name: 'customRadio', path: '/customRadio' },
-]
 
 export default {
-    components: {
-        [Menu.name]: Menu,
-        [Menu.Item.name]: Menu.Item,
-        [SubMenu.name]: SubMenu
-    },
     data() {
-        return {
-            openKeys: [ 'sub1' ],
-            selectedKeys: [],
-            menuList: [
-                {
-                    key: 'sub1',
-                    name: '组件',
-                    children: menu
-                }
-            ]
-        }
+        return {};
     }
 };
 </script>
 
 <style lang="less" scoped>
-.container {
-	width: 100%;
+.index-container {
+	width: 60%;
 	height: 100%;
+	margin: 0 auto;
 	display: grid;
-	grid-template-columns: 230px auto;
+	grid-template-rows: 70px auto;
+	row-gap: 20px;
+}
 
-	aside {
-		height: 100%;
-		color: #fff;
-		background: #001529;
+.header {
+	border-bottom: 1px solid gray;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 
-		h1 {
-            color: #fff;
-            margin: 0;
-            line-height: 59px;
-			text-align: center;
-			border-bottom: 1px solid #fff;
-			margin-bottom: 15px;
-			box-sizing: border-box;
-        }
+	.logo {
+		margin: 0;
 	}
 
-	section {
-		background: rgb(245, 241, 241);
+	.search-input {
+		flex: 1;
+		text-align: right;
+		padding-right: 30px;
 
-		header {
-			height: 60px;
-			background: #fff;
-		}
-
-		.main {
-			padding: 20px;
+		input {
+			outline: none;
+			border: 1px solid gray;
+			width: 300px;
 		}
 	}
+
+	.avatar {
+		border: 1px solid gray;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.main {
+	overflow: auto;
 }
 </style>>
