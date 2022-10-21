@@ -18,10 +18,13 @@
         "@vue/compiler-sfc": "^3.0.5",
         "axios": "^0.21.1",
         "echarts": "^5.1.2",
+        "highlight.js": "^11.6.0",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",
-        "vite": "^2.3.8",
+        "markdown-it": "^13.0.1",
+        "vite": "^2.6.4",
         "vuex": "^4.0.2",
-        "xlsx": "^0.17.1"
+        "xlsx": "^0.17.1",
+        "yaml-front-matter": "^4.1.1"
     }
 }

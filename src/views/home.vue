@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import articleList from 'markdown/dist/articleList.js'
 
 export default {
     data() {
