@@ -1,22 +1,30 @@
 <template>
 	<div class="home-container">
-		<div class="article-item"></div>
-		<div class="article-item"></div>
-		<div class="article-item"></div>
-		<div class="article-item"></div>
-		<div class="article-item"></div>
-		<div class="article-item"></div>
-		<div class="article-item"></div>
+		<div
+			class="article-item"
+			v-for="item of list"
+			:key="item.name"
+			@click="toDetail(item.name)"
+		>
+			{{ item.name }}
+		</div>
 	</div>
 </template>
 
 <script>
-import articleList from 'markdown/dist/articleList.js'
+import articleList from 'markdown/dist/articleList.js';
 
 export default {
     data() {
-        return {};
+        return {
+			list: articleList
+		};
     },
+	methods: {
+		toDetail(name) {
+			this.$router.push(`/detail?name=${name}`)
+		}
+	}
 }
 </script>
 
@@ -25,7 +33,6 @@ export default {
 	display: flex;
 	flex-direction: column;
 	row-gap: 15px;
-	padding: 0 5px 20px;
 }
 .article-item {
 	width: 100%;

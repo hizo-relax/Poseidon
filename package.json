@@ -1,13 +1,11 @@
 {
     "version": "0.0.0",
     "scripts": {
-        "dev": "vite",
+        "dev": "node markdown/index.js && vite",
         "build": "vite build",
         "serve": "vite preview"
     },
     "dependencies": {
-        "@ant-design/icons-vue": "^6.0.1",
-        "ant-design-vue": "^2.2.6",
         "babel-plugin-import": "^1.13.3",
         "vue": "^3.2.9",
         "vue-i18n": "^9.1.7",
@@ -16,15 +14,12 @@
     "devDependencies": {
         "@vitejs/plugin-vue": "^1.2.3",
         "@vue/compiler-sfc": "^3.0.5",
-        "axios": "^0.21.1",
-        "echarts": "^5.1.2",
         "highlight.js": "^11.6.0",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",
         "markdown-it": "^13.0.1",
         "vite": "^2.6.4",
         "vuex": "^4.0.2",
-        "xlsx": "^0.17.1",
         "yaml-front-matter": "^4.1.1"
     }
 }

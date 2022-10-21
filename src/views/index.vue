@@ -1,7 +1,7 @@
 <template>
     <div class="index-container">
 		<header class="header">
-			<h1 class="logo">Poseidon</h1>
+			<h1 class="logo" @click="$router.push('/home')">Poseidon</h1>
 			<div class="search-input">
 				<input type="text" />
 			</div>
@@ -63,6 +63,7 @@ export default {
 }
 
 .main {
+	padding: 0 8px;
 	overflow: auto;
 }
 </style>>

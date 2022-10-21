@@ -1,9 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import index from '../views/index.vue';
-import search from '../views/search.vue';
 import Home from '../views/home.vue';
-import formValid from '../views/form-valid.vue';
-import customRadio from '../views/custom-radio.vue';
+import Detail from '../views/detail.vue';
 import notFound from '../views/404.vue';
 
 // 定义路由
@@ -18,16 +16,8 @@ const routes = [
                 component: Home,
             },
 			{
-                path: '/search',
-                component: search,
-            },
-            {
-                path: '/formValid',
-                component: formValid,
-            },
-            {
-                path: '/customRadio',
-                component: customRadio,
+                path: '/detail',
+                component: Detail,
             },
             {
                 path: '/:catchAll(.*)',
