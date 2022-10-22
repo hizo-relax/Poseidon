@@ -1,12 +1,14 @@
 <template>
     <div class="index-container">
-		<header class="header">
-			<h1 class="logo" @click="$router.push('/home')">Poseidon</h1>
-			<div class="search-input">
-				<input type="text" />
-			</div>
-			<img class="avatar" src="avatar.png" alt="avatar">
-		</header>
+		<div class="header-container">
+			<header>
+				<h1 class="logo" @click="$router.push('/home')">Poseidon</h1>
+				<div class="search-input">
+					<input type="text" placeholder="按回车搜索文章" />
+				</div>
+				<img class="avatar" src="avatar.png" alt="avatar">
+			</header>
+		</div>
 		<div class="main">
 			<router-view />
 		</div>
@@ -24,7 +26,7 @@ export default {
 
 <style lang="less" scoped>
 .index-container {
-	width: 60%;
+	width: 100%;
 	height: 100%;
 	margin: 0 auto;
 	display: grid;
@@ -32,14 +34,22 @@ export default {
 	row-gap: 20px;
 }
 
-.header {
-	border-bottom: 1px solid gray;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+.header-container {
+	background: #fff;
+	box-shadow: 0 2px 4px 0 rgb(114 144 179 / 6%);
+
+	header {
+		width: 60%;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 
 	.logo {
 		margin: 0;
+		cursor: pointer;
 	}
 
 	.search-input {
@@ -48,9 +58,14 @@ export default {
 		padding-right: 30px;
 
 		input {
-			outline: none;
-			border: 1px solid gray;
 			width: 300px;
+			height: 34px;
+			font-size: 14px;
+			background: #f5f6f7;
+			border-radius: 4px;
+			border: none;
+			outline: none;
+			padding-left: 10px;
 		}
 	}
 
@@ -63,7 +78,11 @@ export default {
 }
 
 .main {
-	padding: 0 8px;
+	width: 60%;
+	margin: 0 auto;
 	overflow: auto;
+	background: #fff;
+    box-shadow: 0 0 2px 0 rgb(98 124 153 / 10%);
+    border-radius: 4px;
 }
 </style>>

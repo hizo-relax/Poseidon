@@ -23,6 +23,8 @@ const articleList = fs.readdirSync(articleFileDir).map(item => {
 	const meta = YFM.loadFront(article);
 	return {
 		name: item,
+		title: meta.title,
+		description: meta.description,
 		content: md.render(meta.__content)
 	}
 });

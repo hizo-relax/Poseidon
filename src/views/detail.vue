@@ -1,5 +1,7 @@
 <template>
-    <div v-html="content"></div>
+    <div class="detail-container">
+		<div v-html="content"></div>
+	</div>
 </template>
 
 <script>
@@ -20,4 +22,7 @@ export default {
 </script>
 
 <style lang='less' scoped>
+.detail-container {
+	padding: 0 20px;
+}
 </style>
