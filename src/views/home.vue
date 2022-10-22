@@ -60,6 +60,10 @@ export default {
 		transition: all .3s ease-out 0s;
 		margin: 0 0 20px 0;
 		border: none;
+
+        &:hover {
+            color: #409EFF;
+        }
 	}
 
 	.description {
