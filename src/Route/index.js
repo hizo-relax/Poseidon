@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router';
 import index from '../views/index.vue';
 import Home from '../views/home.vue';
 import Detail from '../views/detail.vue';
-import notFound from '../views/404.vue';
+import PagenotFound from '../views/page-not-found.vue';
 
 // 定义路由
 const routes = [
@@ -21,7 +21,7 @@ const routes = [
             },
             {
                 path: '/:catchAll(.*)',
-                component: notFound
+                component: PagenotFound
             }
         ]
     },

@@ -15,9 +15,14 @@ export default {
     },
 	created() {
 		const { name } = this.$route.query;
-		const findItem = articleList.find(item => item.name === name);
-		this.content = findItem?.content;
-	}
+		this.content = this.getContentByName(name);
+	},
+    methods: {
+        getContentByName(name) {
+            const findItem = articleList.find(item => item.name === name);
+            return findItem?.content || '';
+        }
+    }
 };
 </script>
 
