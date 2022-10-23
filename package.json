@@ -5,7 +5,8 @@
         "build": "vite build",
         "serve": "vite preview",
         "lint": "npx eslint --ext .vue,.js ./ --quiet",
-        "fix": "npx eslint --fix --ext .vue,.js ./ --quiet"
+        "fix": "npx eslint --fix --ext .vue,.js ./ --quiet",
+        "prepare": "husky install"
     },
     "dependencies": {
         "babel-plugin-import": "^1.13.3",
@@ -17,6 +18,7 @@
         "eslint": "^8.26.0",
         "eslint-plugin-vue": "^9.6.0",
         "highlight.js": "^11.6.0",
+        "husky": "^8.0.1",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",
         "markdown-it": "^13.0.1",
