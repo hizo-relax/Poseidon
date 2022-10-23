@@ -5,9 +5,9 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
     resolve: {
-		alias: [
+        alias: [
             { find: 'markdown', replacement: path.resolve(__dirname, './markdown') }
         ]
-	},
+    },
     plugins: [vue()],
 })

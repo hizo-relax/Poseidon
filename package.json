@@ -3,7 +3,9 @@
     "scripts": {
         "dev": "node markdown/index.js && vite",
         "build": "vite build",
-        "serve": "vite preview"
+        "serve": "vite preview",
+        "lint": "npx eslint --ext .vue,.js ./ --quiet",
+        "fix": "npx eslint --fix --ext .vue,.js ./ --quiet"
     },
     "dependencies": {
         "babel-plugin-import": "^1.13.3",
@@ -12,6 +14,8 @@
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^1.2.3",
+        "eslint": "^8.26.0",
+        "eslint-plugin-vue": "^9.6.0",
         "highlight.js": "^11.6.0",
         "less": "^4.1.1",
         "less-loader": "^10.0.1",

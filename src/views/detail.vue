@@ -1,22 +1,23 @@
 <template>
     <div class="detail-container">
-		<div v-html="content"></div>
-	</div>
+        <div v-html="content"></div>
+    </div>
 </template>
 
 <script>
 import articleList from 'markdown/dist/articleList.js'
 
 export default {
+    name: 'DetailPage',
     data() {
         return {
-			content: '',
+            content: '',
         };
     },
-	created() {
-		const { name } = this.$route.query;
-		this.content = this.getContentByName(name);
-	},
+    created() {
+        const { name } = this.$route.query;
+        this.content = this.getContentByName(name);
+    },
     methods: {
         getContentByName(name) {
             const findItem = articleList.find(item => item.name === name);
@@ -28,6 +29,6 @@ export default {
 
 <style lang='less' scoped>
 .detail-container {
-	padding: 0 20px;
+    padding: 0 20px;
 }
 </style>
