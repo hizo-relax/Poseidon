@@ -2,9 +2,16 @@
     <div class="index-container">
         <div class="header-container">
             <header>
-                <h1 class="logo" @click="$router.push('/home')">Poseidon</h1>
+                <h1 class="logo" @click="$router.push('/home')">
+                    Poseidon
+                </h1>
                 <div class="search-input">
-                    <input type="text" placeholder="按回车搜索文章" />
+                    <input
+                        type="text"
+                        placeholder="按回车搜索文章"
+                        :value="$route.query.search"
+                        @keydown.enter="search"
+                    />
                 </div>
                 <img class="avatar" src="avatar.png" alt="avatar">
             </header>
@@ -21,6 +28,16 @@ export default {
     name: 'IndexPage',
     data() {
         return {};
+    },
+    methods: {
+        search(event) {
+            const searchValue = event.target.value;
+            if (searchValue) {
+                this.$router.push(`/home?search=${searchValue}`);
+            } else {
+                this.$router.push(`/home`);
+            }
+        }
     }
 };
 </script>

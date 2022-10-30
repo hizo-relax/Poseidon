@@ -23,9 +23,28 @@ export default {
             list: articleList
         };
     },
+    mounted() {
+        this.filterList();
+    },
+    watch: {
+        "$route.query.search"() {
+            this.filterList();
+        }
+    },
     methods: {
         toDetail(name) {
             this.$router.push(`/detail?name=${name}`)
+        },
+        isMatch(regVal, testVal) {
+            const regular = new RegExp(regVal, 'ig');
+            return regular.test(testVal);
+        },
+        filterList() {
+            const { search } = this.$route.query;
+            this.list = articleList.filter(item => {
+                const text = `${item.title}${item.description}`;
+                return this.isMatch(search, text);
+            });
         }
     }
 }
