@@ -4,8 +4,8 @@
         "dev": "node markdown/index.js && vite",
         "build": "vite build",
         "serve": "vite preview",
-        "lint": "npx eslint --ext .vue,.js ./ --quiet",
-        "fix": "npx eslint --fix --ext .vue,.js ./ --quiet",
+        "lint": "npx eslint --ext .vue,.js ./src --quiet",
+        "fix": "npx eslint --fix --ext .vue,.js ./src --quiet",
         "prepare": "husky install"
     },
     "dependencies": {
