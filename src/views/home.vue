@@ -1,6 +1,5 @@
 <template>
     <div class="home-container">
-        <h1 class="title">最新文章</h1>
         <div
             class="article-item"
             v-for="item of list"
@@ -57,7 +56,7 @@ export default {
 
     .title {
         margin: 0;
-        padding: 15px 20px;
+        padding: 15px 0;
         font-size: 18px;
         border-bottom: 1px solid #DDE4E9;
     }
@@ -65,12 +64,12 @@ export default {
 .article-item {
     width: 100%;
     height: 125px;
-    padding: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid #DDE4E9;
     cursor: pointer;
 
-    &:hover {
-        background: #fcfcfc;
+    &:hover .article-title {
+        color: #409EFF;
     }
 
     .article-title {
@@ -80,10 +79,6 @@ export default {
         transition: all .3s ease-out 0s;
         margin: 0 0 20px 0;
         border: none;
-
-        &:hover {
-            color: #409EFF;
-        }
     }
 
     .description {

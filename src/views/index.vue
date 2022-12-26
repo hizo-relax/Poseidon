@@ -5,15 +5,15 @@
                 <h1 class="logo" @click="$router.push('/home')">
                     Poseidon
                 </h1>
-                <div class="search-input">
+                <!-- <div class="search-input">
                     <input
                         type="text"
                         placeholder="按回车搜索文章"
                         :value="$route.query.search"
                         @keydown.enter="search"
                     />
-                </div>
-                <img class="avatar" src="avatar.png" alt="avatar">
+                </div> -->
+                <!-- <img class="avatar" src="avatar.png" alt="avatar"> -->
             </header>
         </div>
         <div class="main">
@@ -49,15 +49,16 @@ export default {
     margin: 0 auto;
     display: grid;
     grid-template-rows: 70px auto;
-    row-gap: 20px;
+    row-gap: 10px;
 }
 
 .header-container {
     background: #fff;
-    box-shadow: 0 2px 4px 0 rgb(114 144 179 / 6%);
+    box-shadow: 0 2px 2px -2px rgb(0 0 0 / 20%);
 
     header {
-        width: 60%;
+        width: 80%;
+        max-width: 800px;
         height: 100%;
         margin: 0 auto;
         display: flex;
@@ -68,6 +69,7 @@ export default {
     .logo {
         margin: 0;
         cursor: pointer;
+        text-align: left;
     }
 
     .search-input {
@@ -96,11 +98,11 @@ export default {
 }
 
 .main {
-    width: 60%;
+    width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     overflow: auto;
     background: #fff;
-    box-shadow: 0 0 2px 0 rgb(98 124 153 / 10%);
     border-radius: 4px;
 }
 </style>>

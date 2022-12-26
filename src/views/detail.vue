@@ -29,6 +29,6 @@ export default {
 
 <style lang='less' scoped>
 .detail-container {
-    padding: 0 20px;
+    padding-right: 20px;
 }
 </style>
