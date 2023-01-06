@@ -2,27 +2,18 @@
     <button @click="toggle">切换</button>
 </template>
 
-<script>
+<script setup>
+function toggle() {
+    const app = document.querySelector("#app");
+    const theme = app.getAttribute("theme");
 
-export default {
-    name: 'ToggleTheme',
-    data() {
-        return {};
-    },
-    methods: {
-        toggle() {
-            const app = document.querySelector("#app");
-            const theme = app.getAttribute("theme");
-
-            if (theme === "light") {
-                app.setAttribute("theme", "dark");
-            }
-            if (theme === "dark") {
-                app.setAttribute("theme", "light");
-            }
-        }
+    if (theme === "light") {
+        app.setAttribute("theme", "dark");
     }
-};
+    if (theme === "dark") {
+        app.setAttribute("theme", "light");
+    }
+}
 </script>
 
 <style lang="scss" scoped>

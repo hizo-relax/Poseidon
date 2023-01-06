@@ -1,23 +1,23 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import index from '../views/index.vue';
-import Home from '../views/home.vue';
-import Detail from '../views/detail.vue';
+import PageLayout from '../views/page-layout.vue';
+import ArticleList from '../views/article-list.vue';
+import ArticleDetail from '../views/article-detail.vue';
 import PagenotFound from '../views/page-not-found.vue';
 
 // 定义路由
 const routes = [
     {
         path: '/',
-        component: index,
-        redirect: '/home',
+        component: PageLayout,
+        redirect: '/article-list',
         children: [
             {
-                path: '/home',
-                component: Home,
+                path: '/article-list',
+                component: ArticleList,
             },
             {
-                path: '/detail',
-                component: Detail,
+                path: '/article-detail',
+                component: ArticleDetail,
             },
             {
                 path: '/:catchAll(.*)',
