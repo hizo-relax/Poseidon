@@ -14,6 +14,7 @@
                     />
                 </div> -->
                 <!-- <img class="avatar" src="avatar.png" alt="avatar"> -->
+                <ToggleTheme />
             </header>
         </div>
         <div class="main">
@@ -23,9 +24,13 @@
 </template>
 
 <script>
+import ToggleTheme from "src/components/toggle-theme.vue";
 
 export default {
     name: 'IndexPage',
+    components: {
+        ToggleTheme,
+    },
     data() {
         return {};
     },
@@ -37,7 +42,7 @@ export default {
             } else {
                 this.$router.push(`/home`);
             }
-        }
+        },
     }
 };
 </script>
@@ -102,7 +107,7 @@ export default {
     max-width: 800px;
     margin: 0 auto;
     overflow: auto;
-    background: #fff;
     border-radius: 4px;
+    @include themify('background-color', $bg-color);
 }
 </style>>

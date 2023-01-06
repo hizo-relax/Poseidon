@@ -1,0 +1,11 @@
+@mixin themify($key, $valueMap) {
+    // theme list
+    $themes: light,
+    dark;
+
+    @each $theme in $themes {
+        [theme=#{$theme}] & {
+            #{$key}: map-get($valueMap, $theme);
+        }
+    }
+}
